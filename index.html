@@ -1,0 +1,552 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- === 1. Primary Meta Tags === -->
+    <title>w00t.im — Digital Monument</title>
+    <meta name="title" content="w00t.im — Digital Monument">
+    <meta name="description" content="Explore the history and pop culture significance of 'w00t' on this digital monument. Play trivia, click for w00ts, and celebrate the iconic internet slang.">
+    <meta name="keywords" content="w00t, woot, leetspeak, internet slang, gaming, pop culture, digital monument, trivia, clicker game">
+    <meta name="author" content="w00t.im (An unearth.im Project)">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    
+    <!--- NON-NEGOTIABLE AND IMPORTANT:CANONICAL LINKS: if page-url.html is index.html, no need to attach it at the end of link--->
+    
+  <link rel="canonical" href="https://w00t.im/" />
+  
+    <!-- === 2. Webmention Endpoint === -->
+    <link rel="webmention" href="https://webmention.io/unearth.im/webmention" />
+
+    <!-- === 3. Open Graph / Facebook === -->
+    <!-- Note: For articles, change og:type to "article" -->
+    <meta property="og:type" content="website"> 
+    <meta property="og:url" content="https://w00t.im/">
+    <meta property="og:title" content="w00t.im — Digital Monument">
+    <meta property="og:description" content="Explore the history and pop culture significance of 'w00t' on this digital monument. Play trivia, click for w00ts, and celebrate the iconic internet slang.">
+    <!-- Note: Replace 'og-preview.png' with a page-specific preview image if one exists (e.g., 'og-preview-charter.png') -->
+    <meta property="og:image" content="https://w00t.im/og-image.png">
+    <meta property="og:site_name" content="w00t.im">
+
+    <!-- === 4. Twitter Card === -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://w00t.im/">
+    <meta property="twitter:title" content="w00t.im — Digital Monument">
+    <meta property="twitter:description" content="Explore the history and pop culture significance of 'w00t' on this digital monument. Play trivia, click for w00ts, and celebrate the iconic internet slang.">
+    <!-- Note: This should match the og:image -->
+    <meta property="twitter:image" content="https://w00t.im/og-image.png">
+
+    <!-- === 5. Favicons === -->
+    <!-- These paths assume the favicons are in the root directory -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Brand Color Meta Tags - FUSE APPROPRIATE COLORS-->
+    <meta name="theme-color" content="#e6007a">
+    <meta name="msapplication-TileColor" content="#2e2359">
+    <style>
+        body {
+            background: repeating-linear-gradient(45deg, #fff6b2, #ffdee3 20px, #a1c8f0 40px);
+            font-family: 'Courier New', Courier, monospace;
+            color: #2e2359;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #adff2f;
+            color: #e6007a;
+            text-align: center;
+            padding: 1.5em 0 1em 0;
+            letter-spacing: 0.15em;
+            border-bottom: 4px dashed #e6007a;
+        }
+
+        .ascii-art {
+            color: #e6007a;
+            font-size: 1.2em;
+            text-align: center;
+            line-height: 1.1;
+            margin: 1em 0;
+        }
+
+        marquee {
+            font-size: 1.2em;
+            color: #ee7752;
+            background: #fff6b2;
+            border: 2px solid #333;
+            padding: 2px 0;
+        }
+
+        section {
+            padding: 2em;
+            max-width: 700px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 20px #e6007a22;
+            border-radius: 16px;
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #ee7752;
+            text-shadow: 2px 2px #fff6b2;
+        }
+
+        .timeline {
+            border-left: 3px dotted #e6007a;
+            margin: 1em 0 2em 1em;
+            padding: 0 0 0 2em;
+        }
+
+        .timeline-year {
+            color: #0077b6;
+            font-weight: bold;
+            background: #ffd447;
+            padding: 2px 8px;
+            border-radius: 7px;
+            margin-right: 7px;
+            display: inline-block;
+        }
+
+        .timeline-event {
+            margin-bottom: 1em;
+        }
+
+        .quiz-wrap {
+            margin: auto;
+            max-width: 420px;
+        }
+
+        .quiz-question {
+            background: #baffff;
+            border: 2px dashed #2e2359;
+            margin: 1em 0;
+            padding: 1em;
+            border-radius: 12px;
+        }
+
+        .quiz-choices label {
+            display: block;
+            margin: 0.7em 0;
+            cursor: pointer;
+        }
+
+        .quiz-btn {
+            background: #e6007a;
+            color: #fff;
+            border: none;
+            padding: 8px 22px;
+            font-family: inherit;
+            border-radius: 7px;
+            font-size: 1em;
+            margin-top: 0.4em;
+            cursor: pointer;
+        }
+
+        .quiz-result {
+            font-weight: bold;
+            color: #ee7752;
+            background: #ffd447;
+            padding: 0.6em;
+            border-radius: 6px;
+            margin-top: 1em;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            font-size: 1em;
+            color: #baffff;
+            background: #2e2359;
+            letter-spacing: 0.12em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <marquee scrollamount="7">w00t!</marquee>
+        <div class="ascii-art"><b>
+          <pre>
+        _              _            _                _          _     
+       / /\      _   / /\         / /\              /\ \       /\_\   
+      / / /    / /\ / /  \       / /  \             \_\ \     / / /   
+     / / /    / / // / /\ \     / / /\ \            /\__ \   / / /_   
+    / / /_   / / // / /\ \ \   / / /\ \ \          / /_ \ \ / /___/\  
+   / /_//_/\/ / //_/ /  \ \ \ /_/ /  \ \ \        / / /\ \ \\____ \ \ 
+  / _______/\/ / \ \ \   \ \ \\ \ \   \ \ \      / / /  \/_/    / / / 
+ / /  \____\  /   \ \ \   \ \ \\ \ \   \ \ \    / / /          / / /  
+/_/ /\ \ /\ \/     \ \ \___\ \ \\ \ \___\ \ \  / / /          _\/_/   
+\_\//_/ /_/ /       \ \/____\ \ \\ \/____\ \ \/_/ /          /\_\     
+    \_\/\_\/         \_________\/ \_________\/\_\/           \/_/     
+          </pre></b>
+        </div>
+    </header><br><br>
+    <section>
+        <h1>🎮 w00t Origins & Trivia Challenge</h1>
+        <div class="quiz-wrap" id="triviaQuiz">
+            <!-- Quiz will be injected here -->
+        </div>
+    </section>
+    <section>
+        <h1>✨ w00t! in Pop Culture</h1>
+        <div class="timeline">
+            <div class="timeline-event">
+                <span class="timeline-year">1989</span>
+                "Woof" chant (precursor to w00t?) popularized by The Arsenio Hall Show audience.
+            </div>
+            <div class="timeline-event">
+                <span class="timeline-year">1990</span>
+                "Whoof Whoof" referenced in the film "Pretty Woman".
+            </div>
+            <div class="timeline-event">
+                <span class="timeline-year">1993</span>
+                Rap song “Whoot, There It Is” by 95 South released (precursor to w00t).
+            </div>
+            <div class="timeline-event">
+                <span class="timeline-year">1993</span>
+                “Whoomp! (There It Is)” by Tag Team also charts.
+            </div>
+            <div class="timeline-event">
+                <span class="timeline-year">1996</span>
+                “w00t” (leetspeak form) spreads in online gaming/MMORPG circles.
+            </div>
+            <div class="timeline-event">
+                <span class="timeline-year">2007</span>
+                w00t chosen as Merriam-Webster’s Word of the Year.
+            </div>
+            <div class="timeline-event">
+                <span class="timeline-year">2008</span>
+                The band Garaj Mahal titles their album “w00t”.
+            </div>
+            <div class="timeline-event">
+                <span class="timeline-year">2011</span>
+                “woot” added to the Concise Oxford English Dictionary.
+            </div>
+            <div class="timeline-event">
+                <span class="timeline-year">2025</span>
+                “w00t.im” digital monument unveiled!
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>📖 Official Dictionary Definitions</h1>
+        <div
+            style="background:#baffff; border:2px dashed #2e2359; padding:1em; border-radius:12px; font-family:'Courier New', monospace;">
+            <b>Dictionary.com:</b>
+            <ul>
+                <li><i>Interjection.</i> Slang. (an exclamation used especially in video gaming and digital
+                    communications to express joy, satisfaction, triumph, etc.)</li>
+            </ul>
+            <b>Merriam-Webster:</b>
+            <ul>
+                <li><i>Interjection.</i> Used to express joy, approval, or excited enthusiasm — often repeated.</li>
+            </ul>
+            <b>Concise Oxford English Dictionary:</b>
+            <ul>
+                <li><i>woot</i> (also spelled w00t): An exclamation of excitement, approval, or triumph; popularized in
+                    online culture and gaming.</li>
+            </ul>
+            <small style="color:#0077b6;">Sources: Dictionary.com, Merriam-Webster, Oxford</small>
+        </div>
+    </section>
+
+    <section>
+        <h1>📚 Urban Dictionary Meanings</h1>
+        <div
+            style="background:#fff6b2; border:2px dashed #e6007a; padding:1em; border-radius:12px; font-family:'Courier New', monospace;">
+            <b>w00t:</b>
+            <ul>
+                <li>An expression of joy, often typed by gamers/hackers to celebrate a win or a positive moment.</li>
+                <li>Leetspeak variant (“w00t”) using zeros, trending since the 1990s.</li>
+            </ul>
+            <b>woot:</b>
+            <ul>
+                <li>Interjection — "YAYE!" or "Woohoo!" said when stoked during games, chat, or real life.</li>
+            </ul>
+            <b>Alternative Lore:</b>
+            <ul>
+                <li>Some say it came from “Wow, loot!” in old RPGs/D&D, or “Woot, I have root!” in hacking—but most
+                    linguists say these are folk etymologies.</li>
+            </ul>
+            <small style="color:#0077b6;">Sources: Urban Dictionary, slang lore</small>
+        </div>
+    </section>
+
+    <section>
+        <h1>🕹️ The w00t! Clicker</h1>
+        <div
+            style="background:#ffd447; border:2px dashed #e6007a; padding:1em; border-radius:12px; font-family:'Courier New', monospace; text-align:center;">
+            <button id="w00tButton" style="font-size:1.2em; background:#e6007a; color:#fff; border-radius:8px; border:none; padding:12px 40px; cursor:pointer; margin-bottom:12px;">
+            w00t!
+        </button>
+            <div id="w00tCounter" style="font-size:1.3em; margin-bottom:16px;">You've clicked w00t! <b>0</b> times.
+            </div>
+            <div style="background:#fff6b2; border:2px dashed #2e2359; border-radius:7px; padding:1em; margin-top:1em;">
+                <b>🎇 Hall of w00t! Fame:</b>
+                <table style="font-family:inherit; width:100%; margin-top:10px;">
+                    <tr style="background:#adff2f; font-weight:bold;">
+                        <td>User</td>
+                        <td>Total w00t! Clicks</td>
+                    </tr>
+                    <tr>
+                        <td>leet_hero</td>
+                        <td>15042</td>
+                    </tr>
+                    <tr>
+                        <td>w00tmaster</td>
+                        <td>10998</td>
+                    </tr>
+                    <tr>
+                        <td>pixelGrrrl</td>
+                        <td>9865</td>
+                    </tr>
+                    <tr>
+                        <td>ascii_king</td>
+                        <td>9820</td>
+                    </tr>
+                    <tr>
+                        <td>guest1997</td>
+                        <td>8777</td>
+                    </tr>
+                    <tr>
+                        <td>joyslinger</td>
+                        <td>7666</td>
+                    </tr>
+                    <tr>
+                        <td>marquee_winner</td>
+                        <td>6512</td>
+                    </tr>
+                    <tr>
+                        <td>rootz</td>
+                        <td>6420</td>
+                    </tr>
+                    <tr>
+                        <td>retro_bot</td>
+                        <td>6314</td>
+                    </tr>
+                    <tr style="background:#ffd447;">
+                        <td>your_username?</td>
+                        <td>?</td>
+                    </tr>
+                </table>
+                <small style="color:#0077b6;">Only legendary click counts are shown. Are you w00t enough?</small>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>🎉 w00t! Bubble Pop / Emoji Parade</h2>
+        <section>
+            <div
+                style="background:#fff6b2; color:#2e2359; border:2px dashed #e6007a; border-radius:16px; margin-bottom:18px; padding:1em; text-align:center; font-family:'Courier New',monospace;">
+                <b>How to Play:</b><br>
+                <span style="font-size:1.2em;">
+      • <b>Pop those bubbles!</b> Click any floating bubble to burst it and reveal a w00t! surprise.<br>
+      • <b>Tap the emojis!</b> Click on any moving emoji in the parade for instant celebration—“w00t!” will appear at the top!<br>
+      <i>Let your joy loose and see how many w00ts you can rack up!</i>
+    </span>
+            </div>
+        </section>
+        <!-- BUBBLE POP GAME -->
+        <div id="bubble-container"
+            style="position:relative;height:250px;overflow:hidden;background:#ddffff;border-radius:18px;border:2px dashed #2e2359;margin-bottom:24px;">
+            <!-- bubbles will be generated here -->
+            <span id="bubbleW00t" style="position:absolute; left:50%; top:30%; font-size:2em; color:#e6007a; opacity:0; pointer-events:none;">w00t!</span>
+        </div>
+
+        <!-- EMOJI PARADE -->
+        <div id="emoji-parade-container"
+            style="position:relative;height:100px;overflow:hidden;background:#fff6b2; border-radius:16px; border:2px dashed #e6007a;display:flex;align-items:center;gap:18px;">
+            <span id="emojiW00t" style="position:absolute;top:3px;left:50%;transform:translateX(-50%);font-size:2em;color:#ee7752;opacity:0;pointer-events:none;">
+      w00t!
+    </span>
+            <!-- emojis will be generated here -->
+        </div>
+    </section>
+    <script>
+        // BUBBLE GAME
+  function createBubble() {
+    const container = document.getElementById("bubble-container");
+    const b = document.createElement("div");
+    const size = Math.random() * 50 + 18;
+    b.style.width = b.style.height = size + "px";
+    b.style.position = "absolute";
+    b.style.left = Math.random() * (container.offsetWidth-size) + "px";
+    b.style.top = Math.random() * (container.offsetHeight-size) + "px";
+    b.style.borderRadius = "50%";
+    b.style.background = `radial-gradient(circle, #adff2f 40%, #e6007a 90%)`;
+    b.style.opacity = "0.8";
+    b.style.boxShadow = "0 0 18px #0077b688";
+    b.style.zIndex = 2;
+    b.style.transition = "transform 0.1s";
+    b.style.cursor = "pointer";
+
+    // Move bubble slowly
+    let y = parseInt(b.style.top);
+    let dy = Math.random()*0.7+0.2;
+    function float() {
+      y -= dy;
+      if (y < -size || !container.contains(b)) return;
+      b.style.top = y + "px";
+      requestAnimationFrame(float);
+    }
+    float();
+
+    // Pop bubble
+    b.onclick = function(e) {
+      b.remove();
+      const w = document.getElementById("bubbleW00t");
+      w.style.left = b.style.left;
+      w.style.top = b.style.top;
+      w.textContent = "w00t!";
+      w.style.opacity = 1;
+      w.style.transform = "scale(1.4)";
+      setTimeout(()=>{w.style.opacity=0;w.style.transform='scale(1)';},600);
+    };
+    container.appendChild(b);
+
+    // Remove after 8s
+    setTimeout(()=>{ if(container.contains(b))b.remove(); },8000);
+  }
+  setInterval(createBubble, 650);
+
+  // EMOJI PARADE
+  const parade = document.getElementById("emoji-parade-container");
+  const emojis = ["🤩","🎉","😁","🥳","😎","💃","🕺","🌈","👾","🚀"];
+  function createEmoji() {
+    const e = document.createElement("span");
+    e.textContent = emojis[Math.floor(Math.random()*emojis.length)];
+    e.style.fontSize = "2em";
+    e.style.position = "absolute";
+    e.style.bottom = "8px";
+    e.style.left = Math.random() * (parade.offsetWidth-30) + "px";
+    e.style.transition = "bottom 3s linear, left 1s";
+
+    let t = 0;
+    const interval = setInterval(()=>{
+      t += 0.06;
+      e.style.bottom = (8 + Math.sin(t)*7 + t*30) + "px";
+      if(parseInt(e.style.bottom)>100){
+        clearInterval(interval);
+        e.remove();
+      }
+    },60);
+
+    e.onclick = function(){
+      const w = document.getElementById("emojiW00t");
+      w.textContent = Math.random() > 0.5 ? "w00t!" : "woot!";
+      w.style.opacity = 1;
+      w.style.fontSize = "2.5em";
+      setTimeout(()=>{w.style.opacity=0;w.style.fontSize='2em';},600);
+    };
+
+    parade.appendChild(e);
+    setTimeout(()=>{if(parade.contains(e)) e.remove();},3500);
+  }
+  setInterval(createEmoji, 670);
+    </script>
+
+
+    <script>
+        // w00t! button & counter
+    let w00tClicks = 0;
+    const btn = document.getElementById('w00tButton');
+    const ctr = document.getElementById('w00tCounter');
+    btn.onclick = () => {
+        w00tClicks++;
+        ctr.innerHTML = `You've clicked w00t! <b>${w00tClicks}</b> times.`;
+    };
+    </script>
+
+
+    <script>
+        // Trivia Questions Data
+        const quizData = [
+            {
+                q: "What year did \"w00t\" become widely popular on the Internet?",
+                choices: ["1989", "1996", "2007", "2011"],
+                answer: 1
+            },
+            {
+                q: "w00t gained extra fame after being selected as Merriam-Webster’s Word of the Year in:",
+                choices: ["1993", "2007", "2011", "2015"],
+                answer: 1
+            },
+            {
+                q: "The earliest musical reference for \"whoot\" (w00t’s precursor) came from which 1993 rap song?",
+                choices: ["Whoomp! (There It Is) (Tag Team)", "Whoot, There It Is (95 South)", "Jump Around (House of Pain)", "Mo Money Mo Problems (Notorious B.I.G.)"],
+                answer: 1
+            },
+            {
+                q: "Which popular TV show in the early '90s helped spread the celebratory “woof” chant?",
+                choices: ["Friends", "The Arsenio Hall Show", "Saved by the Bell", "The Simpsons"],
+                answer: 1
+            },
+            {
+                q: "In 2011, \"woot\" was officially added to which dictionary?",
+                choices: ["Webster’s Collegiate", "Concise Oxford English Dictionary", "Cambridge Dictionary", "Urban Dictionary"],
+                answer: 1
+            }
+        ];
+        const container = document.getElementById('triviaQuiz');
+        let current = 0, score = 0;
+        function renderQuiz() {
+            if (current >= quizData.length) {
+                container.innerHTML = `<div class="quiz-result">Congrats! You scored ${score} out of ${quizData.length} w00t points!</div>`;
+                return;
+            }
+            const q = quizData[current];
+            const qHtml = `
+                <div class="quiz-question">
+                    <strong>Q${current+1}:</strong> ${q.q}
+                    <form class="quiz-choices" onsubmit="return false;">
+                        ${q.choices.map((c,i)=>`
+                            <label>
+                                <input type="radio" name="choice" value="${i}"> ${c}
+                            </label>
+                        `).join('')}
+                        <button class="quiz-btn">Submit</button>
+                    </form>
+                    <div id="quizOut${current}"></div>
+                </div>
+            `;
+            container.innerHTML = qHtml;
+            document.querySelector('.quiz-choices').onsubmit = function(e) {
+                e.preventDefault();
+                const radios = document.querySelectorAll('input[type=radio]');
+                let picked = -1;
+                radios.forEach((r,i)=>{if(r.checked) picked = i;});
+                if (picked === q.answer) {
+                    score++;
+                    document.getElementById('quizOut'+current).innerHTML = "<span style='color: #adff2f;'>Correct! w00t!</span>";
+                } else {
+                    document.getElementById('quizOut'+current).innerHTML = "<span style='color: #e6007a;'>00f! — try the next one!</span>";
+                }
+                setTimeout(() => { current++; renderQuiz(); }, 1000);
+            };
+        }
+        renderQuiz();
+    </script>
+    <footer>
+        Made with w00t, nostalgia & ASCII art — w00t.im<br>
+        <span style="color:#ffd447; font-family:'Courier New',monospace; font-size:0.95em;">
+          a digital artifact unearthed and preserved by
+          <a href="https://unearth.im" target="_blank" style="color:#e6007a; text-decoration:underline; font-weight:bold;">unearth.im</a>
+        </span>
+    </footer>
+
+</body>
+
+</html>
